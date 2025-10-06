@@ -15,7 +15,7 @@ const JobRecommendation = () => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:5000/recommend_jobs", {
+      const response = await fetch("https://skill-gap-analysi-and-job-recommendation.onrender.com/recommend_job", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
