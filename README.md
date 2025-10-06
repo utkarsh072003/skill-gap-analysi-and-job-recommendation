@@ -3,6 +3,8 @@
 [GitHub Repository](https://github.com/utkarsh072003/skill-gap-analysi-and-job-recommendation) | [Live Demo](https://skill-gap-analysi-and-job-recommend.vercel.app/)
 
 ---
+## Note
+Date should be filled before 30 March 2025.
 
 ## Project Overview
 This is a **full-stack web application** developed in collaboration with teammate **Bhuvnesh Gupta**. The platform analyzes a user's skills and career aspirations to provide **personalized job recommendations** and a **skill gap analysis**. Users can discover which skills they are missing for their desired roles and receive actionable suggestions to improve their employability.
