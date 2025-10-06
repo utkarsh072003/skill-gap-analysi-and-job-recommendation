@@ -57,7 +57,7 @@ def recommend_jobs(user_skills, min_salary_lpa, user_date):
     top_jobs = [job[0] for job in job_scores[:2]]  # Top 3 most relevant jobs
     
     
-    date_gap = user_date - timedelta(days=365)
+    date_gap = user_date - timedelta(days=120)
     filtered_jobs = df[df['Job_Title'].isin(top_jobs)]
     filtered_jobs = filtered_jobs[
         ((filtered_jobs['Min Salary'] >= min_salary_lpa) | (filtered_jobs['Max Salary'] >= min_salary_lpa)) &
