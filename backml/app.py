@@ -68,7 +68,7 @@ def recommend_jobs(user_skills, min_salary_lpa, user_date):
     return filtered_jobs[['Job_Title', 'Company_Name', 'Skills_Required', 'Salary_Range', 'Job_Type', 'Location', 'Date_Posted', 'Apply Here']].to_dict(orient='records')
 
 
-@app.route("/recommend_jobs", methods=["POST"])
+@app.route("/recommend_jobs", methods=["POST", "OPTIONS"])
 def get_recommendations():
     try:
         data = request.json
@@ -107,7 +107,7 @@ def recommend_roles_with_gaps(model, vectorizer, df, user_skills):
         "Recommendations": recommendations
     }
 
-@app.route("/skill-gap-analysis", methods=["POST"])
+@app.route("/skill-gap-analysis", methods=["POST", "OPTIONS"])
 def skill_gap_analysis():
     try:
         data = request.get_json()
