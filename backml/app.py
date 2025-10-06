@@ -5,6 +5,8 @@ from flask import Flask, request, jsonify
 from datetime import datetime, timedelta
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+CORS(app, supports_credentials=True)
+
 # Load job dataset
 data_path = "dataset.csv"
 df = pd.read_csv(data_path)
