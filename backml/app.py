@@ -4,7 +4,7 @@ from flask_cors import CORS
 from flask import Flask, request, jsonify
 from datetime import datetime, timedelta
 from sklearn.feature_extraction.text import TfidfVectorizer
-
+app = Flask(__name__)
 CORS(app, supports_credentials=True)
 
 # Load job dataset
@@ -45,8 +45,7 @@ job_data = pd.read_csv("job_roles_skills.csv")
 job_data = job_data.dropna(subset=["Required_Skills"])
 
 # Flask app setup
-app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins
+
 
 def recommend_jobs(user_skills, min_salary_lpa, user_date):
     user_vector = vectorizer.transform([user_skills])  #  Transform user input dynamically
