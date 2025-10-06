@@ -15,7 +15,7 @@ const SkillGapAnalysis = () => {
 
     try {
       // Assuming you have a backend API that will handle this request
-      const response = await fetch("http://localhost:5000/skill-gap-analysis", {
+      const response = await fetch("https://skill-gap-analysi-and-job-recommendation.onrender.com/skill-gap-analysis", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
